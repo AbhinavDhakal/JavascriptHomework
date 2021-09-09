@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Homework</title>
+  </head>
+
+  <body>
+    <!-- MAIN HOMEWORK STUFF -->
+    <a href="index.html" style="color: blue">>CSS Version</a>
+
+    <h1>Javascript Homework - Non CSS</h1>
+    <div class="container" style="display: flex; justify-content: space-around">
+      <div id="SimpleInterest">
+        <h2>Simple Interest Calculator</h2>
+        <label for="principalSI"> Principal Amount :</label><br />
+        <input type="number" id="principalSI" placeholder="0" /><br />
+        <label for="rateSI"> Rate :</label><br />
+        <input type="number" id="rateSI" placeholder="0" /><br />
+        <label for="timeSI"> Time :</label><br />
+        <input type="number" id="timeSI" placeholder="0" /><br />
+        <button onclick="calculateSI()">Calculate</button>
+
+        <div id="resultSI">Result:</div>
+      </div>
+
+      <div id="AreaPerimeter">
+        <div class="inputArea">
+          <h2>Calculate Area And Perimeter of Rectangle</h2>
+          <label for="principalSI"> Length :</label><br />
+          <input type="number" id="lengthAP" placeholder="0" /><br />
+          <label for="breadthAP"> Breadth :</label><br />
+          <input type="number" id="breadthAP" placeholder="0" /><br />
+          <button onclick="calculateAP()">Calculate</button>
+        </div>
+        <div id="resultAP">Result:</div>
+      </div>
+
+      <div id="AreaCircle">
+        <h2>Calculate Area of Circle</h2>
+        <label for="radiusAC"> Radius :</label><br />
+        <input type="number" id="radiusAC" placeholder="0" /><br />
+        <button onclick="calculateAC()">Calculate</button>
+        <div id="resultAC">Result:</div>
+      </div>
+    </div>
+
+    <script>
+      //Simple Interest Calculator
+
+      function calculateSI() {
+        let principal = Number(document.getElementById("principalSI").value);
+        let rate = Number(document.getElementById("rateSI").value);
+        let time = Number(document.getElementById("timeSI").value);
+
+        let simpleInterest = (principal * rate * time) / 100;
+
+        let result = document.getElementById("resultSI");
+
+        result.innerHTML = `Result: <br> The Simple Interest <br>  is <strong> ${simpleInterest} </strong>`;
+      }
+
+      //Area and Perimeter of Rectangle Calulator
+
+      function calculateAP() {
+        let length = Number(document.getElementById("lengthAP").value);
+        let breadth = Number(document.getElementById("breadthAP").value);
+
+        let Area = length * breadth;
+        let Perimeter = 2 * (length + breadth);
+
+        let result = document.getElementById("resultAP");
+
+        result.innerHTML = `Result: <br> The Area is ${Area} <br> & <br> Perimeter is <strong>${Perimeter}</strong>`;
+      }
+
+      //Area of Circle Calculator
+
+      function calculateAC() {
+        let radius = Number(document.getElementById("radiusAC").value);
+
+        let Area = (22 / 7) * radius ** 2;
+
+        let result = document.getElementById("resultAC");
+
+        result.innerHTML = `Result: <br>The Area <br> of the Circle <br> is <strong>${Area} </strong>`;
+      }
+    </script>
+  </body>
+</html>
