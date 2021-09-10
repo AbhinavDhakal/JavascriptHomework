@@ -25,7 +25,7 @@ function calculateAP() {
 
   let result = document.getElementById("resultAP");
 
-  result.innerHTML = `Result: <br> The Area is ${Area} <br> & <br> Perimeter is <strong>${Perimeter}</strong>`;
+  result.innerHTML = `Result: <br> The Area is <strong>${Area}</strong> <br> & <br> Perimeter is <strong>${Perimeter}</strong>`;
 }
 
 //Area of Circle Calculator
